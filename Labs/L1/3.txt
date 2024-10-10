@@ -1,0 +1,2 @@
+a Semnal digitalizat la o frecventa de 2000 de esantioane atunci avem distanta de 1/2000 
+b Eșantion memorat pe 4 biți => memorat pe 0,5 bytes  -> o oră are 3600 de secunde. avem 2000 de esantioane pe secunda->0.5*2000*3600=3 600 000 bytes
