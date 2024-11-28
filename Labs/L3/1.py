@@ -1,4 +1,5 @@
 import math
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -14,6 +15,9 @@ for i in range(N):
     axs[i].plot(x_imaginary[i], label='Partea Imaginară')
     axs[i].legend()
 plt.tight_layout()
+output_folder = "output"
+plt.savefig(os.path.join(output_folder, "grafic1.png"), format="png", dpi=300)
+plt.savefig(os.path.join(output_folder, "grafic1.pdf"), format="pdf")
 plt.show()
 
 F_conj_transpose = np.conj(F1).T

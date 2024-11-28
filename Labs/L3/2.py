@@ -1,6 +1,11 @@
 import math 
 import matplotlib.pylab as plt
 import numpy as np
+import os
+output_folder = "output"
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
+
 
 f = 10
 T = 1
@@ -19,4 +24,6 @@ for idx, o in enumerate(omega):
     ax.set_aspect('equal')
     ax.set_title(f'ω = {o}')
 plt.tight_layout()
+plt.savefig(os.path.join(output_folder, "grafic2.png"), format="png", dpi=300)
+plt.savefig(os.path.join(output_folder, "grafic2.pdf"), format="pdf")
 plt.show()
