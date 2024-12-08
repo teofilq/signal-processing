@@ -10,9 +10,9 @@ for N in val:
     # x = np.random.rand(N)
     t = np.linspace(0, 1, N, endpoint=False)
     x = np.sin(2 * np.pi * 5 * t) 
+    start = time.perf_counter()
     F = [[np.exp(-2j * np.pi * m * n / N) for n in range(N)] for m in range(N)]
     F = np.array(F)
-    start = time.perf_counter()
     dft_result = np.dot(F, x)
     stop = time.perf_counter()
     dft_times.append(stop - start)
